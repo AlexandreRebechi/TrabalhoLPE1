@@ -23,7 +23,9 @@ create table usuarios (
 	telefone varchar(14)  not null, 
 	nome varchar(50) not null
 );
-
+insert into usuarios (email, senha, tipo, telefone, nome) 
+values ('alexandrerbc@gmail.com', '123456', 'A','(54)99984-4348','alexandre'), 
+('joao@ifsul.edu.br', '123456', 'U','(54)44484-4348','Joao');
 
 SELECT * FROM pais ORDER BY nome
 SELECT * FROM estados ORDER BY nome
