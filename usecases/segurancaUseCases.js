@@ -10,8 +10,7 @@ const autenticaUsuarioDB = async (body) => {
             throw "Usuário ou senha inválidos";
         }
         const usuario = results.rows[0];
-        return new Usuario(usuario.email, 
-            usuario.tipo, usuario.telefone, usuario.nome, 
+        return new Usuario(usuario.email, usuario.tipo, usuario.telefone, usuario.nome, 
             ['ADDCATEGORIA','REMOVECATEGORIA']);
     } catch (err){
         throw err;

@@ -3,7 +3,7 @@ const { getEstados, addEstados, updadeEstados, deleteEstados, getEstadosPorCodig
 const { verificaJWT } = require('../controllers/segurancaController');
 
 
-rotasEstados =  new Router();
+const rotasEstados =  new Router();
 
 rotasEstados.route('/estados')
     .get(verificaJWT, getEstados)
