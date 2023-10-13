@@ -3,7 +3,7 @@ const Pais = require('../entities/pais')
 
 const getPaisDB = async () => {
     try {
-        const { rows } = await pool.query('SELECT * FROM pais ORDER BY nome');
+        const { rows } = await pool.query(`SELECT * FROM pais ORDER BY nome`);
         return rows.map((pais) => new Pais(pais.codigo, pais.nome));
     } catch (err) {
         throw "Erro : " + err

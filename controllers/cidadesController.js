@@ -1,6 +1,8 @@
 const { getCidadesDB, addCidadesDB, updadeCidadesDB, deleteCidadesDB, getCidadesPorCodigoDB } = require('../usecases/cidadesUseCases')
 
 const getCidades = async (request, response) => {
+    console.log('Usuario no getCategorias' + 
+    JSON.stringify(request.usuario));
     await getCidadesDB()
         .then(data => response.status(200).json(data))
         .catch(err => response.status(400).json({
